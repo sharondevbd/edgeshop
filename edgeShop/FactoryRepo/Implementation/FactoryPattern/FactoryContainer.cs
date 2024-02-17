@@ -23,22 +23,22 @@ namespace edgeShop.FactoryRepo.Implementation.FactroryPattern
 
             //Create Multiple Catagory
             CatagoryRepo.AddRange(new List<Catagory> {
-            new Catagory{Id = 1, Name="Desktop", ParentId=1,IsActive= true},
-            new Catagory{Id = 2, Name="Laptop", ParentId=2,IsActive= true},
-            new Catagory{Id = 3, Name="Component", ParentId=3,IsActive= true},
-            new Catagory{Id = 4, Name="Networking", ParentId=4,IsActive= true},
-            new Catagory{Id = 5, Name="Mobile", ParentId=5,IsActive= true}
+            new Catagory{Id = 1, Name="Desktop", ParentId=1,IsAvailable= true},
+            new Catagory{Id = 2, Name="Laptop", ParentId=2,IsAvailable= true},
+            new Catagory{Id = 3, Name="Component", ParentId=3,IsAvailable= true},
+            new Catagory{Id = 4, Name="Networking", ParentId=4,IsAvailable= true},
+            new Catagory{Id = 5, Name="Mobile", ParentId=5,IsAvailable= true}
             });
 
             //Read Operation
             Console.WriteLine("----------------------------Catagory List----------------------------");
             Console.WriteLine("ID \t Name \t ParentID \t Active?");
-            CatagoryRepo.GetAll().ForEach(c => { Console.WriteLine($"{c.Id}\t{c.Name}\t{c.ParentId}\t{c.IsActive}"); });
+            CatagoryRepo.GetAll().ForEach(c => { Console.WriteLine($"{c.Id}\t{c.Name}\t{c.ParentId}\t{c.IsAvailable}"); });
             
             //Update Operation
             
             var updateCat = CatagoryRepo.GetById(4);
-            updateCat.IsActive = false;
+            updateCat.IsAvailable = false;
             CatagoryRepo.Update(updateCat);
 
             //Delete Operation
@@ -46,7 +46,7 @@ namespace edgeShop.FactoryRepo.Implementation.FactroryPattern
             CatagoryRepo.Delete(4);
             Console.WriteLine("----------------------------Catagory List----------------------------");
             Console.WriteLine("ID \t Name \t ParentID \t Active?");
-            CatagoryRepo.GetAll().ForEach(c => { Console.WriteLine($"{c.Id}\t{c.Name}\t{c.ParentId}\t{c.IsActive}"); });
+            CatagoryRepo.GetAll().ForEach(c => { Console.WriteLine($"{c.Id}\t{c.Name}\t{c.ParentId}\t{c.IsAvailable}"); });
             #endregion
         }
 

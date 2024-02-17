@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using edgeShop.FactoryRepo.Implementation.MethodPattern;
 
 namespace edgeShop
 {
@@ -17,9 +18,9 @@ namespace edgeShop
             data.Excute();
 
             ////Method Pattern
-            //Console.WriteLine("---DI----------------Method pattern---------");
-            //MethodContainer methodContainer = new MethodContainer();
-            //methodContainer.Execute(repo);
+            Console.WriteLine("____________________Method pattern____________________");
+            MethodContainer methodConObj = new MethodContainer();
+            methodConObj.ExecMethod(repo);
 
             Console.ReadKey();
         }

@@ -59,7 +59,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FactoryRepo\FactoryRepo.cs" />
-    <Compile Include="FactoryRepo\Implementation\FactroryPattern\FactoryContainer.cs" />
+    <Compile Include="FactoryRepo\Implementation\FactoryPattern\FactoryContainer.cs" />
+    <Compile Include="FactoryRepo\Implementation\MethodPattern\MethodContainer.cs" />
     <Compile Include="FactoryRepo\IrepoFactory.cs" />
     <Compile Include="Models\BaseDTO.cs" />
     <Compile Include="Models\Catagory.cs" />
