@@ -13,15 +13,19 @@ namespace edgeShop
     {
         static void Main(string[] args)
         {
-            IrepoFactory repo = new FactoryRepo.FactoryRepo();
-            FactoryContainer data = new FactoryContainer(repo);
-            data.Excute();
+            try
+            {
+                IrepoFactory repo = new FactoryRepo.FactoryRepo();
+                FactoryContainer data = new FactoryContainer(repo);
+                data.Excute();
 
-            ////Method Pattern
-            Console.WriteLine("____________________Method pattern____________________");
-            MethodContainer methodConObj = new MethodContainer();
-            methodConObj.ExecMethod(repo);
-
+                ////Method Pattern
+                Console.WriteLine("____________________Method pattern____________________");
+                MethodContainer methodConObj = new MethodContainer();
+                methodConObj.ExecMethod(repo);
+            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
+            finally { Console.WriteLine("\nThanks To Respected Assesors & IsDB, Md. Naimul Islam Sharon, WADA-58, 1281042"); }
             Console.ReadKey();
         }
     }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace edgeShop.Models
 {
-    internal class Product:BaseDTO
+    public class Product:BaseDTO
     {
         public string Name { get; set; }
         public double PurchasePrice { get; set; }

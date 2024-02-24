@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace edgeShop.Models
 {
-    internal class Catagory:BaseDTO
+    public class Catagory:BaseDTO
     {
         public string Name { get; set; }
         public int ParentId { get; set; }

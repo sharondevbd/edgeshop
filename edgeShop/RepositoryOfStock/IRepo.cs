@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace edgeShop.RepositoryOfStock
 {
-    internal interface IRepo<T> where T : BaseDTO
+    public interface IRepo<T> where T : BaseDTO
     {
         //CRUD OPeration Methods Decleareation
         void Create(T item);

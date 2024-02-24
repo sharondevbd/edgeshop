@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace edgeShop.RepositoryOfStock
 {
-    internal class StockRepo<T> : IRepo<T> where T : BaseDTO
+    public class StockRepo<T> : IRepo<T> where T : BaseDTO
     {
         private readonly List<T> All; //filed Variable of A (List Type) Obj All.
 

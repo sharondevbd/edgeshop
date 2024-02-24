@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace edgeShop.FactoryRepo
 {
-    internal interface IrepoFactory
+    public interface IrepoFactory
     {
         IRepo<T> CreateRepo<T>() where T : BaseDTO;
     }
